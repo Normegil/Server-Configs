@@ -1,6 +1,6 @@
 #!/bin/bash
 docker run \
   -d \
-  -v /config/no-ip/:/home/normegil/Server-Configs/docker/no-ip/ \
+  -v /home/normegil/Server-Configs/docker/no-ip/:/config/no-ip/ \
   --name data \
   data
