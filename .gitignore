@@ -1,2 +1,8 @@
+#TEMP FILES
+*.swp
+
+#MySQL
+docker/databases/mysql/data/
+
 #No-Ip
 noip2.conf
