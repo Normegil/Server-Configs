@@ -5,3 +5,4 @@ docker run \
   -v /home/normegil/Server-Configs/docker/no-ip/scripts/:/scripts/no-ip/ \
   --name data \
   data
+  data
