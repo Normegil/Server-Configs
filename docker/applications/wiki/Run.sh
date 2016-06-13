@@ -1,9 +1,7 @@
 #!/bin/bash
 docker run \
 	-d \
-	-p 6067:6067 \
-	-v /root/Server-Configs/docker/applications/wiki/data:/wiki \
+	-p 3000:80 \
 	-e VIRTUAL_HOST=wiki.normegil.be \
-	--volumes-from data \
 	--name app-wiki \
-	application/wiki
+	istepanov/dokuwiki:2.0

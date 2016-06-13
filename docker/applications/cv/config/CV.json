@@ -1,0 +1,210 @@
+{
+  "position": "Developer",
+  "name": "Ory",
+  "surname": "Olivier",
+  "birthdate": "07/10/1987",
+  "description": "As a software developer, I'm looking for every opportunities to learn and make this knowledge useful on interesting projects.",
+  "mail": "jobs@normegil.be",
+  "website": "normegil.be",
+  "github": "github.com/Normegil",
+  "address": {
+    "country": "Belgium",
+    "city": "Liège"
+  },
+  "skills": [
+    {
+      "name": "Languages",
+      "skill": [
+        "Java",
+        "Javascript",
+        "Golang",
+        "HTML5",
+        "CSS3",
+        "SQL",
+        "C++",
+        "PHP"
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "skill": [
+        "JPA (Hibernate)",
+        "EJB",
+        "JAX-RS",
+        "NodeJS",
+        "AngularJS",
+        "Express",
+        "Jade",
+        "Electron"
+      ]
+    },
+    {
+      "name": "Techniques",
+      "skill": [
+        "REST Services (Consumer and producer)",
+        "Multithreading",
+        "Dependency Injection",
+        "Test (Unit test and Integration tests)"
+      ]
+    },
+    {
+      "name": "Tools",
+      "skill": [
+        "svn",
+        "git",
+        "npm",
+        "go",
+        "Maven",
+        "Docker",
+        "Vagrant"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Développeur Java",
+      "description": "Development of a web application used to manage, compute and pay belgian pensions. Mainly focused on the application back-end and high concurrency batches.",
+      "enterprise" : {
+        "name": "Smals",
+        "city": "Brussels",
+        "country": "Belgium"
+      },
+      "technologies": [
+        "Java EE",
+        "Vaadin",
+        "Hibernate",
+        "JBoss",
+        "Maven",
+        "svn",
+        "git",
+        "SQL"
+      ],
+      "startDate": "03/11/2011"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Moebius",
+      "description": "Manga downloader written in NodeJS, with a command-line interface and using Electron to manage the GUI.",
+      "url": "https://github.com/Normegil/moebius",
+      "technologies" : [
+        "EcmaScript 6",
+        "NodeJS",
+        "Electron",
+        "HTML5",
+        "Materialize",
+        "Bunyan",
+        "Commander",
+        "Terminal-Kit"
+      ]
+    },
+    {
+      "name": "Moebius-go",
+      "description": "Attempt to rewrite Moebius app in Golang, with a terminal GUI",
+      "url": "https://github.com/Normegil/moebius-go",
+      "technologies" : [
+        "Golang",
+        "Logrus",
+        "termbox-go"
+      ]
+    },
+    {
+      "name": "MyLibrary-JS",
+      "description": "Webapp managing comic book library. It's working with an AngularJS frontend connected to a REST webservices written in Javascript running on NodeJS.",
+      "url": "https://github.com/Normegil/MyLibrary-JS",
+      "technologies" : [
+        "NodeJS",
+        "Express",
+        "AngularJS",
+        "REST Services",
+        "MongoDB",
+        "Docker",
+        "Vagrant",
+        "Fluentd",
+        "npm"
+      ]
+    },
+    {
+      "name": "MyLibrary-Java",
+      "description": "REST Server used to manage a comic book library. It's working on a Wildfly server, use JAX-B and JAX-RS for the REST services, and a PostgreSQL database.",
+      "url": "https://github.com/Normegil/MyLibrary-Java",
+      "technologies" : [
+        "Java",
+        "Hibernate",
+        "JAX-RS",
+        "Jackson",
+        "JPA",
+        "EJB",
+        "PostgreSQL",
+        "REST Services",
+        "Maven",
+        "SQL"
+      ]
+    }
+  ],
+  "trainings": [
+    {
+      "name": "Bachelier en Informatique de gestion",
+      "etablissement": {
+        "name": "Helmo Saint-Laurent",
+        "city": "Liège",
+        "country": "Belgium"
+      },
+      "mention" : "Satisfaction",
+      "startDate": "2009",
+      "endDate": "2011"
+    },
+    {
+      "name": "Master en Sciences Informatiques",
+      "etablissement": {
+        "name": "ULg",
+        "city": "Liège",
+        "country": "Belgium"
+      },
+      "mention" : "Unfinished",
+      "startDate": "2006",
+      "endDate": "2009"
+    }
+  ],
+  "languages": [
+    {
+      "name": "French",
+      "level": {
+        "general": {
+          "name": "native speaker"
+        },
+        "europeanStandard": {
+          "understanding": {
+            "listening": "C2",
+            "reading": "C2"
+          },
+          "speaking": {
+            "interaction": "C2",
+            "production": "C2"
+          },
+          "writing": "C2"
+        }
+      }
+    },
+    {
+      "name": "English",
+      "level": {
+        "general": {
+          "name": "very good command",
+          "description": "I can have an everday life or work conversation of mid level and understand both written and spoken english."
+        },
+        "europeanStandard": {
+          "understanding": {
+            "listening": "B2",
+            "reading": "C1"
+          },
+          "speaking": {
+            "interaction": "B2",
+            "production": "B1"
+          },
+          "writing": "B1"
+        }
+      }
+    }
+  ]
+}

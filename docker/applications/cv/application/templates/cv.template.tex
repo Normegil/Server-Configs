@@ -1,0 +1,67 @@
+% LaTeX file for resume
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res}
+\usepackage[utf8]{inputenc}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font
+\topmargin=-0.5in  % start text higher on the page
+\setlength{\textheight}{10in} % increase text height to fit resume on 1 page
+\begin{document}
+\name{ {{surname}} {{name}} }
+
+\address{ {{address.city}}, {{address.country}}}
+
+\begin{resume}
+
+\section{PROFILE}
+\normalsize{\section{Birthdate}} {{{birthdate}}}
+
+\normalsize{\section{Contact}}
+  \begin{itemize}
+    \item Phone: Available on request
+    \item Mail: {{{mail}}}
+    \item Website: {{{website}}}
+    \item Github: {{{github}}}
+  \end{itemize}
+
+\normalsize{\section{Presentation}} {{{description}}}
+
+\section{SKILLS}
+{{#skills}}\normalsize{\section{ {{{name}}} }}
+  {{{display.skills}}}
+{{/skills}}
+
+\section{LANGUAGES}
+{{#languages}}\normalsize{\section{ {{{name}}} }}
+  \textit{ {{{level.general.name}}} } \\
+  {{{level.general.description}}}
+{{/languages}}
+
+\section{EXPERIENCE}
+{{#experiences}}
+  \textbf{ {{enterprise.name}} } ({{enterprise.city}}, {{enterprise.country}}) \hfill \textbf{ {{{display.date}}} } \\
+  {{name}}\\ \\
+  {{description}} \\ \\
+  \textit{ {{{display.technologies}}} } \\
+{{/experiences}}
+
+\section{PROJECTS}
+{{#projects}}
+  \textbf{ {{name}} } \hfill \textbf{ {{{url}}} }\\ \\
+  {{{description}}} \\ \\
+  \textit{ {{{display.technologies}}} }
+
+{{/projects}}
+
+
+\section{SCHOOLS}
+{{#trainings}}
+  \textbf{ {{etablissement.name}} }  ({{etablissement.city}}, {{etablissement.country}}) \hfill \textbf{ {{startDate}}-{{endDate}} }\\
+  {{name}} \\
+  {{mention}} \\
+
+{{/trainings}}
+
+\end{resume}
+\end{document}

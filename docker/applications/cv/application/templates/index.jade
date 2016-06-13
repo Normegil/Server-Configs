@@ -1,0 +1,84 @@
+doctype html
+html
+  head
+    meta(http-equiv="content-type", content="text/html; charset=utf-8")
+    meta(name="keywords" content="")
+    meta(name="description" content="")
+    title
+      = cv.surname + ' ' + cv.name.toUpperCase() + ' - Curriculum Vitae'
+    style
+      include index.css
+  body
+    #page-wrap
+      #contact-info.vcard
+        h1.fn #{cv.surname} #{cv.name.toUpperCase()}
+        p.separatedText Available as :
+          a(href='/json') JSON
+          |  -
+          a(href='/xml') XML
+          |  -
+          a(href='/pdf') PDF
+          |  -
+          a(href='/docx') DOCX
+        p
+          | Birthdate: #{cv.birthdate}
+          br
+          | City: #{cv.address.city}, #{cv.address.country}
+          br
+          | Phone: Available on request
+          br
+          | Email:
+          a.email(href='mailto:#{cv.mail}') #{cv.mail}
+          br
+          | Website:
+          a.email(href='http://#{cv.website}') #{cv.website}
+          br
+          | Github:
+          a.email(href='http://#{cv.github}') #{cv.github}
+      #objective
+        p #{cv.description}
+      .clear
+      dl
+        dd.clear
+        dt Skills
+        dd
+          each skillCategory in cv.skills
+            h2 #{skillCategory.name}
+            p #{skillCategory.display.skills}
+        dd.clear
+        dt Experiences
+        dd
+          each experience in cv.experiences
+            h2 #{experience.enterprise.name}
+              span #{experience.display.date}
+            h5 #{experience.enterprise.city}, #{experience.enterprise.country}
+            p #{experience.description}
+            p.skills #{experience.display.technologies}
+        dd.clear
+        dt Projects
+        dd
+          each project in cv.projects
+            h2 #{project.name}
+              span
+                a(href='#{project.url}') Sources
+            p #{project.description}
+            p.skills #{project.display.technologies}
+        dd.clear
+        dt Languages
+        dd
+          each language in cv.languages
+            h2 #{language.name}
+              span #{language.level.general.name}
+            p #{language.level.general.description}
+        dd.clear
+        dt Schools
+        dd
+          each training in cv.trainings
+            h2 #{training.etablissement.name}
+              span #{training.startDate} - #{training.endDate}
+            h5 #{training.etablissement.city}, #{training.etablissement.country}
+            p #{training.name}
+              if training.mention !== undefined && training.mention !== ''
+                = ' ('+training.mention+')'
+
+      .clear
