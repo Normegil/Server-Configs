@@ -6,3 +6,6 @@ docker/databases/mysql/data/
 
 #No-Ip
 noip2.conf
+
+#IntelliJ IDEA
+.idea/
