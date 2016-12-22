@@ -62,5 +62,11 @@ RUN curl -O -L "http://dokuwiki.jalakai.co.uk/plugin-code.tar.gz" && \
 #https://www.dokuwiki.org/plugin:mathjax
 RUN curl -O -L "https://github.com/liffiton/dokuwiki-plugin-mathjax/archive/master.zip" && \
     unzip master.zip -d /var/www/lib/plugins/ && \
-    mv /var/www/lib/plugins/*-mathjax-* /var/www/lib/plugins/mathjax && \
-    rm -rf master.zip
+    mv /var/www/lib/plugins/*-mathjax-* /var/www/lib/plugins/mathjax && \    rm -rf master.zip
+
+#Hidden
+#https://github.com/gturri/hidden/zipball/master
+RUN curl -O -L "https://github.com/gturri/hidden/zipball/master" && \
+    unzip master -d /var/www/lib/plugins/ && \
+    mv /var/www/lib/plugins/gturri-hidden-* /var/www/lib/plugins/hidden && \
+    rm -rf master
