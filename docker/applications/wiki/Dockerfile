@@ -1,12 +1,9 @@
 FROM istepanov/dokuwiki:2.0
 
-VOLUME /var/dokuwiki-storage/data/pages
-VOLUME /var/dokuwiki-storage/conf
+#VOLUME /var/dokuwiki-storage/data/pages
+#VOLUME /var/dokuwiki-storage/conf
 
-RUN apt-get update; exit 0
-
-RUN apt-get install -y unzip tar && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk --no-cache add unzip tar
 
 #HELPERS
 #PageList
@@ -62,7 +59,8 @@ RUN curl -O -L "http://dokuwiki.jalakai.co.uk/plugin-code.tar.gz" && \
 #https://www.dokuwiki.org/plugin:mathjax
 RUN curl -O -L "https://github.com/liffiton/dokuwiki-plugin-mathjax/archive/master.zip" && \
     unzip master.zip -d /var/www/lib/plugins/ && \
-    mv /var/www/lib/plugins/*-mathjax-* /var/www/lib/plugins/mathjax && \    rm -rf master.zip
+    mv /var/www/lib/plugins/*-mathjax-* /var/www/lib/plugins/mathjax && \
+    rm -rf master.zip
 
 #Hidden
 #https://github.com/gturri/hidden/zipball/master

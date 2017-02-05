@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t server/wiki .
+sudo docker build -t server/wiki .
